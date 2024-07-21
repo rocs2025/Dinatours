@@ -1,3 +1,4 @@
+
 // src/app/registration/page.js
 
 'use client'; // Mantén esta línea si necesitas un Client Component
@@ -68,30 +69,32 @@ export default function Login() {
   };
 
   return (
-    <form onSubmit={register} className='w-96 py-8 px-6 bg-white rounded-xl max-w-sm mt-7 text-black'>
-      <h1 className="block text-center font-bold mb-5">Log in</h1>
-      <label htmlFor="identifier" className="block">Email</label>
-      <input type="email" name="identifier" id="identifier" className="block border border-[#0A2913] py-3 px-4 rounded-lg outline-none focus:ring-1 mb-4 w-full" />
+    <div className="grid min-h-screen place-items-center">
+      <form onSubmit={register} className='w-96 py-8 px-6 bg-white rounded-xl max-w-sm text-black'>
+        <h1 className="block text-center font-bold mb-5">Log in</h1>
+        <label htmlFor="identifier" className="block">Email</label>
+        <input type="email" name="identifier" id="identifier" className="block border border-[#0A2913] py-3 px-4 rounded-lg outline-none focus:ring-1 mb-4 w-full" />
 
-      <label htmlFor="password" className="block">Password</label>
-      <div className="relative w-full">
-        <input 
-          type={passwordVisible ? "text" : "password"} 
-          name="password" 
-          id="password" 
-          className="block border border-[#0A2913] py-3 px-4 rounded-lg outline-none focus:ring-1 mb-4 w-full" 
-        />
-        <button 
-          type="button" 
-          onClick={togglePasswordVisibility} 
-          className="absolute inset-y-0 right-0 px-4 py-3 text-sm text-gray-700"
-        >
-          <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
-        </button>
-      </div>
+        <label htmlFor="password" className="block">Password</label>
+        <div className="relative w-full">
+          <input 
+            type={passwordVisible ? "text" : "password"} 
+            name="password" 
+            id="password" 
+            className="block border border-[#0A2913] py-3 px-4 rounded-lg outline-none focus:ring-1 mb-4 w-full" 
+          />
+          <button 
+            type="button" 
+            onClick={togglePasswordVisibility} 
+            className="absolute inset-y-0 right-0 px-4 py-3 text-sm text-gray-700"
+          >
+            <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
+          </button>
+        </div>
 
-      <button type="submit" className='text-center bg-[#0A2913] hover:bg-[#42594C] text-white w-[150px] py-2 rounded-lg font-semibold mt-2 mx-auto block'>Submit</button>
-      <div>{message}</div>
-    </form>
+        <button type="submit" className='text-center bg-[#0A2913] hover:bg-[#42594C] text-white w-[150px] py-2 rounded-lg font-semibold mt-2 mx-auto block'>Submit</button>
+        <div>{message}</div>
+      </form>
+    </div>
   );
 }
