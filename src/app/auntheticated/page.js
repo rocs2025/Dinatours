@@ -6,8 +6,11 @@ import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
 
 export default function App() {
   const router = useRouter();
-  const Menu = [ { name: 'Login', path: '/login' },
-    { name: 'Sign Up', path: '/registration' }];
+  const Menu = [ { name: 'Profile', path: '/' },
+    { name: 'Favorites', path: '/' },
+    { name: 'Log out', path: '/'}
+
+];
     const handleNavigation = (path) => {
       router.push(path);
     };

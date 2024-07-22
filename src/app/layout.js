@@ -1,5 +1,7 @@
+// src/app/layout.js
+
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; // Tu archivo de estilos globales
 
 const inter = Inter({ subsets: ["latin"] });
 

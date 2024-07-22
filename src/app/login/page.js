@@ -50,7 +50,7 @@ export default function Login() {
           timer: 2000,
           showConfirmButton: false,
         }).then(() => {
-          router.push('/principal'); // Redirige a la página en otra carpeta
+          router.push('/auntheticated'); // Redirige a la página en otra carpeta
         });
       }
     } catch (error) {

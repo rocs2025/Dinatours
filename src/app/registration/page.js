@@ -59,7 +59,7 @@ export default function Registration() {
           timer: 2000,
           showConfirmButton: false
         }).then(() => {
-          router.push('/principal');
+          router.push('/auntheticated');
         });
       }
     } catch (error) {
